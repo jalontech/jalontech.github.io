@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Welcome to Jalon</title>
+    <link href='css/common.css' rel='stylesheet' />
+    <link href='css/index.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="main-center">
+        <div class='header'>
+            <div class='language clearfloat'>
+               <!--  <a href='javascript:;' class="cn right">中文</a>
+                <a href='javascript:;' class="en right">English</a> -->
+            </div>
+            <div class='clearfloat'>
+                <a href='#' class="logo left">
+                    <img src='img/logo.png' alt='logo' />
+                </a>
+                <div class="left nav" id="nav">
+                    <ul class="clearfloat">
+                        <li>
+                            <a href="index.html" class="current" id="defCurrent">首页</a>
+                        </li>
+                        <li>
+                            <a href="product-1.html">产品</a>
+                        </li>
+                        <li>
+                            <a href="#">解决方案</a>
+                        </li>
+                        <li>
+                            <a href="#">优势</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">联系方式</a>
+                        </li>
+                    </ul>
+                    <div class='current-bg' id="current-bg"></div>
+                </div>
+                <form class="right search" action="#" method="POST">
+                    <input type='text' placeholder="搜索..." class="search-input" name='search' value='' />
+                    <input type='submit' class='button' value='' name='' />
+                </form>
+            </div>
+        </div>
+        <div class="slider clearfloat">
+            <ul class="bxslider">
+                <li class="s1">
+                    <a href="#" class="more">Read More</a>
+                </li>
+                <li class="s2">
+                    <a href="#" class="more">Read More</a>
+                </li>
+                <li class="s3">
+                    <a href="#" class="more">Read More</a>
+                </li>
+            </ul>
+        </div>
+        <div class="features clearfloat">
+            <div class='block left'>
+                <img src='img/features1.jpg' alt='' />
+                <h1>电子标签系统</h1>
+                <p>
+                   Find out why ESL labels will work for you.
+                </p>
+                <a href="#" class="more">查看更多</a>
+            </div>
+            <div class='block left' style="margin-left:25px">
+                <img src='img/features2.jpg' alt='' />
+                <h1>智能家居</h1>
+                <p>
+                   The Janlon ESL system is robust, easy to
+install and use,utilizing existing network
+infrastructrue.
+                </p>
+                <a href="#" class="more">查看更多</a>
+            </div>
+            <div class='block right'>
+                <img src='img/features3.jpg' alt='' />
+                <h1>穿戴式设备</h1>
+                <p>
+                   Exporler the range of Jalon ESL labels.
+                </p>
+                <a href="#" class="more">查看更多</a>
+            </div>
+        </div>
+    </div>
+    <div class='footer'>
+        <div class='main-center'>
+            <div class='clearfloat'>
+                <div class='left'>
+                    <h1>网站地图</h1>
+                    <ul>
+                        <li><a href="/">首页</a></li>
+
+                        <li><a href="/product-1.html">产品</a></li>
+                        <li><a href="/contact.html">联系我们</a></li>
+
+                    </ul>
+                </div>
+
+                <div class='left'>
+                    <h1>产品</h1>
+                    <ul>
+                        <li><a href="/product-1.html">JL2402</a></li>
+                        <li><a href="/product-2.html">JL2404</a></li>
+                        <li><a href="/product-3.html">JLB4001</a></li>
+
+                    </ul>
+                </div>
+                <div class='right contact'>
+                    <h1>联系方式</h1>
+                    <p>地址：张江高科技园区牛顿路200号8号楼305<br>
+                    E-mail: <a href="mailto:jack@jalontech.com?subject=feedback">jack@jalontech.com</a><br>
+					www.jalontech.com</p>
+                </div>
+            </div>
+            <div class='site-info'>
+                <p>COPYRIGHT 2006 ALL RIGHTS RESERVED HANGZHOU CENTURY CO.,LTD</p>
+                <p>Links： Security Zhejiang Century-Lead IOT Technology Co.,Ltd THEBIGSPACE Hangzhou RFID Research Center All right Researved.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type='text/javascript' src="js/jquery.js"></script>
+    <script type='text/javascript' src="js/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script type='text/javascript' src="js/common.js"></script>
+    <script type='text/javascript'>
+        (function($){
+            $(document).ready(function(){
+                $('.bxslider').bxSlider({
+                    auto: true,
+                    controls:false,
+                    slideWidth:920,
+                    adaptiveHeight:true
+                });
+            });
+         })(jQuery);
+    </script>
+</body>
+</html>

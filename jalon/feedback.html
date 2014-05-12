@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Feedback</title>
+    <link href='css/common.css' rel='stylesheet' />
+    <link href='js/jquery-ui-1.10.3.custom/css/smoothness/jquery-ui-1.10.3.custom.min.css' rel='stylesheet' />
+    <style type='text/css'>
+        .content h1{
+            color:#ccc;
+            margin-bottom:6px;
+            font-size:25px;
+            font-family:'PT Sans';
+        }
+
+        form.feedback input, form.feedback textarea, form.feedback select{
+            display:inline-block;
+            width:500px;
+            border:1px solid #e2e2e2;
+            height:35px;
+            line-height:35px;
+            border-radius:3px;
+            padding:0 5px;
+            margin-bottom:15px;
+            box-shadow:0 1px 1px #eaeaea;
+        }
+
+        form.feedback input:focus, form.feedback textarea:focus{
+            border-color:#aaa;
+        }
+
+        form.feedback textarea{
+            width:650px;
+            height:150px;
+        }
+        form.feedback span{
+            color:#bbb;
+        }
+
+        form.feedback button{
+            width:120px;
+            height:45px;
+            line-height:40px;
+            text-align:center;
+            border-radius:3px;
+            background:#7fb5cd;
+            background:-webkit-linear-gradient(#7fb5cd, #6ca3bc);
+            background:-moz-linear-gradient(#7fb5cd, #6ca3bc);
+            background:-ms-linear-gradient(#7fb5cd, #6ca3bc);
+            background:-o-linear-gradient(#7fb5cd, #6ca3bc);
+            border:1px solid #5d92aa;
+            font-weight:bold;
+            font-size:14px;
+            box-shadow:inset 0 1px 0px #a1d4eb;
+            color:#37667c;
+            font-family:'Calibri';
+            margin-right:10px;
+        }
+        form.feedback button:hover{
+            color:#fff;
+        }
+        form.feedback label.error{
+            display:block;
+            color:red;
+            font-size:13px;
+            margin-top:-10px;
+            margin-bottom:10px;
+        }
+
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+            background:white;
+            color:#999;
+            font-size:11px;
+        }
+        .ui-button-icon-only .ui-icon{
+            margin-left:-37px;
+        }
+        .ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon{
+            margin-top: -15px;
+        }
+        .ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text{
+            display:none;
+        }
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+            border:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-center">
+        <div class='header'>
+            <div class='language clearfloat'>
+               <!--  <a href='javascript:;' class="cn right"></a>
+                <a href='javascript:;' class="en right"></a> -->
+            </div>
+            <div class='clearfloat'>
+                <a href='#' class="logo left">
+                    <img src='img/logo.png' alt='logo' />
+                </a>
+                <div class="left nav" id="nav">
+                    <ul class="clearfloat">
+                        <li>
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="product-1.html">产品</a>
+                        </li>
+                        <li>
+                            <a href="#">解决方案</a>
+                        </li>
+                        <li>
+                            <a href="#">优势</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="current" id="defCurrent">联系方式</a>
+                        </li>
+                    </ul>
+                    <div class='current-bg' id="current-bg"></div>
+                </div>
+                <form class="right search" action="#" method="POST">
+                    <input type='text' placeholder="Search here..." class="search-input" name='search' value='' />
+                    <input type='submit' class='button' value='' name='' />
+                </form>
+            </div>
+        </div>
+        <div class="page-center">
+            <div class='clearfloat'>
+                <div class='sidebar left' id="sidebar">
+                    <ul>
+                        <li><a href="contact.html" class="first">联系方式</a></li>
+                        <li><a href="feedback.html" id="currentItem"  class="first current-item last" >用户留言</a></li>
+                    </ul>
+                </div>
+                <div class='content-body right'>
+                    <div class="bread-thumb">
+                        <a href='index.html'>首页</a> > <span>用户留言</span>
+                    </div>
+                    <div class="content">
+                        <form class="feedback" id="theform" action='#' method='post'>
+                            <input type='text' placeholder="请输入姓名" name='name' value='' />
+                            <input type='text' placeholder="请输入电话号码" name='telephone' value='' />
+                            <input type='text' placeholder="请输入邮箱" name='email' value='' />
+                            <select name='select' id="combobox">
+                                <option value='0'> 选择  </option>
+                                <option value='1'> Select Option 1 </option>
+                                <option value='2'> Select Option 2 </option>
+                                <option value='3'> Select Option 3 </option>
+                                <option value='4'> Select Option 4 </option>
+                            </select>
+                            <textarea name="message" placeholder="请留言"></textarea>
+                            <button type="submit">提 交</button>
+                            <span>谢谢留言, 我们会在第一时间给你答复。</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='footer'>
+        <div class='main-center'>
+            <div class='clearfloat'>
+                  <div class='left'>
+                    <h1>网站地图</h1>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+
+                        <li><a href="/product-1.html">Our Products</a></li>
+                        <li><a href="/contact.html">About Us</a></li>
+
+                    </ul>
+                </div>
+
+                <div class='left'>
+                    <h1>产品</h1>
+                    <ul>
+                        <li><a href="/product-1.html">JL2402</a></li>
+                        <li><a href="/product-2.html">JL2404</a></li>
+                        <li><a href="/product-3.html">JLB4001</a></li>
+
+                    </ul>
+                </div>
+                <div class='right contact'>
+                    <h1>联系方式</h1>
+                    <p>地址：张江高科技园区牛顿路200号8号楼305<br>
+                    E-mail: <a href="mailto:jack@jalontech.com?subject=feedback">jack@jalontech.com</a><br>
+					www.jalontech.com</p>
+                </div>
+            </div>
+            <div class='site-info'>
+                <p>COPYRIGHT 2006 ALL RIGHTS RESERVED HANGZHOU CENTURY CO.,LTD</p>
+                <p>Links： Security Zhejiang Century-Lead IOT Technology Co.,Ltd THEBIGSPACE Hangzhou RFID Research Center All right Researved.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type='text/javascript' src="js/jquery.js"></script>
+    <script type='text/javascript' src="js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type='text/javascript' src="js/jquery.validate.js"></script>
+    <script type='text/javascript' src="js/common.js"></script>
+    <script type='text/javascript'>
+       (function($){
+            $.widget( "custom.combobox", {
+                _create: function() { this.wrapper = $( "<span>" ) .addClass( "custom-combobox" )
+                    .insertAfter( this.element );
+
+                    this.element.hide();
+                    this._createAutocomplete();
+                    this._createShowAllButton();
+                },
+
+                _createAutocomplete: function() {
+                    var selected = this.element.children( ":selected" ),
+                    value = selected.val() ? selected.text() : "";
+
+                    this.input = $( "<input>" )
+                        .appendTo( this.wrapper )
+                        .val( value )
+                        .attr( "title", "" )
+                        .addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left" )
+                        .autocomplete({
+                            delay: 0,
+                            minLength: 0,
+                            source: $.proxy( this, "_source" )
+                        })
+                    .tooltip({
+                        tooltipClass: "ui-state-highlight"
+                    });
+
+                    this._on( this.input, {
+                        autocompleteselect: function( event, ui ) {
+                        ui.item.option.selected = true;
+                        this._trigger( "select", event, {
+                            item: ui.item.option
+                        });
+                    },
+
+                    autocompletechange: "_removeIfInvalid"
+                    });
+                },
+
+                _createShowAllButton: function() {
+                    var input = this.input,
+                    wasOpen = false;
+
+                    $( "<a>" )
+                        .attr( "tabIndex", -1 )
+                        .attr( "title", "Show All Items" )
+                        .tooltip()
+                        .appendTo( this.wrapper )
+                        .button({
+                            icons: {
+                                primary: "ui-icon-triangle-1-s"
+                            },
+                            text: false
+                        })
+                        .removeClass( "ui-corner-all" )
+                        .addClass( "custom-combobox-toggle ui-corner-right" )
+                        .mousedown(function() {
+                            wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+                        })
+                    .click(function() {
+                        input.focus();
+
+                        // Close if already visible
+                        if ( wasOpen ) {
+                            return;
+                        }
+
+                        // Pass empty string as value to search for, displaying all results
+                        input.autocomplete( "search", "" );
+                    });
+              },
+
+                _source: function( request, response ) {
+                    var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+                    response( this.element.children( "option" ).map(function() {
+                        var text = $( this ).text();
+                        if ( this.value && ( !request.term || matcher.test(text) ) )
+                            return {
+                                label: text,
+                                value: text,
+                                option: this
+                            };
+                    }) );
+                },
+
+                _removeIfInvalid: function( event, ui ) {
+
+                    // Selected an item, nothing to do
+                    if ( ui.item ) {
+                      return;
+                    }
+
+                    // Search for a match (case-insensitive)
+                    var value = this.input.val(),
+                        valueLowerCase = value.toLowerCase(),
+                        valid = false;
+                    this.element.children( "option" ).each(function() {
+                        if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+                            this.selected = valid = true;
+                            return false;
+                        }
+                    });
+
+                    // Found a match, nothing to do
+                    if ( valid ) {
+                        return;
+                    }
+
+                    // Remove invalid value
+                    this.input
+                    .val( "" )
+                    .attr( "title", value + " didn't match any item" )
+                    .tooltip( "open" );
+                    this.element.val( "" );
+                    this._delay(function() {
+                        this.input.tooltip( "close" ).attr( "title", "" );
+                    }, 2500 );
+                    this.input.data( "ui-autocomplete" ).term = "";
+                },
+
+                _destroy: function() {
+                    this.wrapper.remove();
+                    this.element.show();
+                }
+            });
+
+            $.validator.addMethod("isMobile", function(value, element){
+                var length = value.length;
+                var mobile = /^1[3|4|5|8][0-9]\d{4,8}$/;
+                return this.optional(element) || (length == 11 && mobile.test(value));
+            }, "Invalide telephone number");
+
+             $.validator.addMethod("isEmail", function(value, element){
+                var email = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return this.optional(element) || email.test(value);
+            }, "Invalide email address");
+
+            $(document).ready(function(){
+                $( "#combobox" ).combobox();
+
+                //validate
+                $('#theform').validate({
+                    rules:{
+                        "name":{
+                            minlength:2,
+                            required:true
+                        },
+                        "telephone":{
+                            required:true,
+                            isMobile:true
+                        },
+                        "email":{
+                            required:true,
+                            isEmail:true
+                        },
+                        "message":{
+                            required:true
+                        }
+                    },
+                    messages:{
+                        "name":{
+                            //minlength:'姓名不能少于两个字',
+                            //required:'请填写您的姓名'
+                        },
+                        "telephone":{
+
+                        }
+                    }
+                });
+
+            });
+         })(jQuery);
+    </script>
+</body>
+</html>
